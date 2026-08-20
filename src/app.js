@@ -1,4 +1,4 @@
-// src/app.js — Frontend SPA for AI Decision Tracker
+// src/app.js — Frontend SPA for SMART DECISION TRACKER
 // Served by FastAPI at http://127.0.0.1:8000
 // All API calls go to the same origin (/api/...) — no CORS issues.
 
