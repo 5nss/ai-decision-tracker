@@ -1,5 +1,5 @@
 # server/app.py
-"""FastAPI entry point for AI Decision Tracker.
+"""FastAPI entry point for SMART DECISION TRACKER.
 Serves API endpoints AND the static frontend from the src/ directory.
 Run with:  uvicorn server.app:app --reload --port 8000
 """
@@ -28,7 +28,7 @@ from . import models  # noqa: F401 – required so SQLAlchemy registers the mode
 # ── Auto-create all tables on startup ────────────────────────────────────────
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="AI Decision Tracker API", version="0.1.0")
+app = FastAPI(title="SMART DECISION TRACKER API", version="0.1.0")
 
 # ── CORS ─────────────────────────────────────────────────────────────────────
 app.add_middleware(
