@@ -1,0 +1,14 @@
+**/node_modules
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/*.egg-info
+frontend/dist
+backend/data
+backend/evals/.cache
+.env
+.git
+.github
+.claude
+docs
