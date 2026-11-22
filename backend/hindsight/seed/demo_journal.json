@@ -1,0 +1,612 @@
+{
+  "version": 1,
+  "about": "Synthetic six-month journal of a final-year CS student, written for this project. Assumptions, verdicts and evidence are hand-labeled. It seeds the demo workspace and is the gold set for backend/evals. Every evidence string is an exact quote from its outcome text. 'theme' groups related decisions and is the ground truth for the retrieval eval.",
+  "decisions": [
+    {
+      "key": "t1a", "theme": "learn-fast", "domain": "study", "confidence": 0.85,
+      "created_days_ago": 172, "review_after_days": 16,
+      "title": "Learn React in two weeks for the hackathon",
+      "reasoning": "The hackathon is in 16 days and our team needs a frontend. I think two weeks of evenings is enough to learn React if I go straight to hooks. My JavaScript is solid, so I can skip the fundamentals. The official tutorial and a couple of YouTube courses should cover everything our project needs.",
+      "alternatives": "Use plain HTML with a CSS framework, or let a teammate own the frontend.",
+      "expected_outcome": "I build the hackathon frontend in React myself.",
+      "premortem": "It's review day and this failed because the two weeks of evenings never really existed once coursework showed up.",
+      "missing_considerations": ["How many evenings are actually free during assignment weeks", "A fallback if React isn't ready in time"],
+      "assumptions": [
+        {"text": "Two weeks of evenings is enough to learn React", "category": "time", "risk": "high", "verdict": "failed", "evidence": "assignments ate most of my evenings"},
+        {"text": "My JavaScript is strong enough to skip the fundamentals", "category": "self", "risk": "medium", "verdict": "held", "evidence": "The JavaScript side was fine"},
+        {"text": "Tutorials will cover what our project needs", "category": "external", "risk": "low", "verdict": "unclear", "evidence": ""}
+      ],
+      "outcome": {"happened": false, "what_happened": "I got through components and hooks, but state management took most of the second week and assignments ate most of my evenings. The JavaScript side was fine. For the hackathon we used a UI template and I only wired up two screens.", "lesson": "Budget learning time against the evenings you really have; assignments always take a share."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t2a", "theme": "job-applications", "domain": "career", "confidence": 0.75,
+      "created_days_ago": 168, "review_after_days": 21,
+      "title": "Apply to 30 internships with one generic resume",
+      "reasoning": "Internship season is short, so I want to maximize applications. I think volume matters more than tailoring at this stage, since most companies just skim resumes. If I send 30 applications this week, recruiters should get back to me within two weeks and I'll have a few interviews lined up.",
+      "alternatives": "Tailor resumes for 8 to 10 roles I actually want.",
+      "expected_outcome": "Get at least two interview calls within three weeks.",
+      "premortem": "It's review day and this failed because a generic resume looked generic to every recruiter.",
+      "missing_considerations": ["What reply rate generic applications usually get", "Whether the resume matches each role"],
+      "assumptions": [
+        {"text": "Volume matters more than tailoring", "category": "external", "risk": "medium", "verdict": "failed", "evidence": "the resume didn't match the roles"},
+        {"text": "Recruiters will reply within two weeks", "category": "people", "risk": "medium", "verdict": "failed", "evidence": "3 replies out of 30"}
+      ],
+      "outcome": {"happened": false, "what_happened": "3 replies out of 30 after three weeks, all rejections. Two seniors who looked at it said the resume didn't match the roles I applied for.", "lesson": "Ten tailored applications beat thirty generic ones; track reply rate, not volume."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t3a", "theme": "side-project-launch", "domain": "projects", "confidence": 0.9,
+      "created_days_ago": 165, "review_after_days": 35,
+      "title": "Launch my habit-tracker app in one month",
+      "reasoning": "I've wanted a portfolio project that people actually use. One month is enough to build and launch a simple habit tracker if I work on it every day. My friends said they'd try it, so I'll get feedback quickly. I don't need a backend for the first version since everything can live in local storage.",
+      "alternatives": "Contribute to an existing open-source habit app.",
+      "expected_outcome": "The app is live with at least 10 people using it weekly.",
+      "premortem": "It's review day and this failed because the one-month plan had no buffer and nobody committed to using it.",
+      "missing_considerations": ["How users will find the app beyond friends", "What happens if it slips past a month"],
+      "assumptions": [
+        {"text": "One month is enough to build and launch the app", "category": "time", "risk": "high", "verdict": "failed", "evidence": "Launch took seven weeks"},
+        {"text": "Friends will try it and give feedback", "category": "people", "risk": "medium", "verdict": "failed", "evidence": "Two friends signed up and never opened it again"},
+        {"text": "I won't need a backend for the first version", "category": "external", "risk": "medium", "verdict": "failed", "evidence": "I ended up needing a backend for sync anyway"}
+      ],
+      "outcome": {"happened": false, "what_happened": "Launch took seven weeks, not four. Two friends signed up and never opened it again. Everyone wanted their habits on both phone and laptop, so I ended up needing a backend for sync anyway.", "lesson": "Ask users what they need before deciding what the first version can skip."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t4a", "theme": "fitness-routine", "domain": "health", "confidence": 0.85,
+      "created_days_ago": 160, "review_after_days": 21,
+      "title": "Go to the gym five days a week starting Monday",
+      "reasoning": "I've been sitting all day and want to get fit before placements. I'll go every morning before class, five days a week. Once the first week is done I expect the habit to carry me, and mornings are the only time I'm always free.",
+      "alternatives": "Start with three days a week, or home workouts.",
+      "expected_outcome": "Still going at least four days a week after a month.",
+      "premortem": "It's review day and this failed because exams arrived in week three and the routine had no fallback.",
+      "missing_considerations": ["What happens during exam weeks", "A minimum version for busy weeks"],
+      "assumptions": [
+        {"text": "I'll stay motivated after the first week", "category": "self", "risk": "high", "verdict": "failed", "evidence": "then stopped completely during exams"},
+        {"text": "Mornings are free for the gym", "category": "time", "risk": "medium", "verdict": "failed", "evidence": "Exam prep took over my mornings"}
+      ],
+      "outcome": {"happened": false, "what_happened": "Went five days the first week and two the second, then stopped completely during exams. Exam prep took over my mornings and I never restarted.", "lesson": "Start smaller than you think, and plan for the weeks that break routines."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t5a", "theme": "exam-prep", "domain": "study", "confidence": 0.7,
+      "created_days_ago": 156, "review_after_days": 4,
+      "title": "Cram for the DBMS exam in the last three days",
+      "reasoning": "I've been busy with projects, so I'll study for DBMS in the three days before the exam. I think three days of full-time study is enough to cover the syllabus. Past papers should be similar to this exam, so I'll focus on those.",
+      "alternatives": "Start a week earlier with an hour a day.",
+      "expected_outcome": "Score at least 75.",
+      "premortem": "It's review day and this failed because three days couldn't cover the whole syllabus.",
+      "missing_considerations": ["How big the syllabus is compared with three days", "Which topics carry the most marks"],
+      "assumptions": [
+        {"text": "Three days is enough to cover the syllabus", "category": "time", "risk": "high", "verdict": "failed", "evidence": "Covered about 60% of the syllabus"},
+        {"text": "Past papers will be similar to this exam", "category": "external", "risk": "medium", "verdict": "unclear", "evidence": ""}
+      ],
+      "outcome": {"happened": false, "what_happened": "Covered about 60% of the syllabus before the exam. The paper had two long questions from the topics I had skipped. Scored 64.", "lesson": "Cramming covers less than you plan; start a week earlier and map the syllabus first."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t6a", "theme": "team-dependency", "domain": "projects", "confidence": 0.8,
+      "created_days_ago": 152, "review_after_days": 21,
+      "title": "Split the group project four ways and trust teammates to deliver",
+      "reasoning": "Our software engineering project has four modules and four of us. Splitting it equally is fair and fastest. Everyone said they'd finish their part by the deadline, and I expect integration at the end to take one evening.",
+      "alternatives": "Set internal deadlines a week early, or pair up on the risky modules.",
+      "expected_outcome": "Submit a working project on time without an all-nighter.",
+      "premortem": "It's review day and this failed because the modules only met each other the night before the deadline.",
+      "missing_considerations": ["Internal checkpoints before the deadline", "Who owns integration"],
+      "assumptions": [
+        {"text": "Teammates will finish their parts on time", "category": "people", "risk": "high", "verdict": "failed", "evidence": "Two of the four parts came in the night before"},
+        {"text": "Integration at the end will take one evening", "category": "time", "risk": "medium", "verdict": "failed", "evidence": "integration took the whole weekend"}
+      ],
+      "outcome": {"happened": false, "what_happened": "Two of the four parts came in the night before the deadline, and I rewrote one module myself. With interfaces that didn't match, integration took the whole weekend.", "lesson": "Set an internal deadline a week early and integrate continuously."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t7a", "theme": "money-purchase", "domain": "money", "confidence": 0.8,
+      "created_days_ago": 148, "review_after_days": 45,
+      "title": "Buy a gaming laptop on EMI for ML work",
+      "reasoning": "I'm getting into machine learning and my laptop is slow. A laptop with a decent GPU should let me train models locally. I'll use the GPU enough to justify the cost, and the monthly EMI fits my budget from my stipend.",
+      "alternatives": "Use Google Colab or Kaggle notebooks for free.",
+      "expected_outcome": "Use the GPU every week for ML projects and feel it was worth it.",
+      "premortem": "It's review day and this failed because free cloud notebooks covered everything the GPU was for.",
+      "missing_considerations": ["Whether free tools already cover the need", "Resale value if it goes unused"],
+      "assumptions": [
+        {"text": "I'll use the GPU enough to justify the cost", "category": "money", "risk": "high", "verdict": "failed", "evidence": "Used the GPU for training maybe twice"},
+        {"text": "The EMI fits my monthly budget", "category": "money", "risk": "low", "verdict": "held", "evidence": "The EMI itself was manageable"}
+      ],
+      "outcome": {"happened": false, "what_happened": "Used the GPU for training maybe twice in six weeks; Colab was enough for everything I built. The EMI itself was manageable, but I regret the spend.", "lesson": "Try the free option for a month before paying for capacity."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t8a", "theme": "freelance-gig", "domain": "money", "confidence": 0.75,
+      "created_days_ago": 145, "review_after_days": 30,
+      "title": "Take a freelance website job for a local shop",
+      "reasoning": "A local shop wants a website and offered a fixed fee. It will take about 20 hours, the client seems clear about what they want, and the pay is worth the time compared with my other options.",
+      "alternatives": "Decline and focus on internship prep.",
+      "expected_outcome": "Deliver in three weeks and earn a decent hourly rate.",
+      "premortem": "It's review day and this failed because the scope kept growing and the price didn't.",
+      "missing_considerations": ["A written scope", "What happens when requirements change"],
+      "assumptions": [
+        {"text": "The client will give clear requirements", "category": "people", "risk": "medium", "verdict": "failed", "evidence": "The requirements changed three times"},
+        {"text": "The job will take about 20 hours", "category": "time", "risk": "medium", "verdict": "failed", "evidence": "it took about 45 hours"},
+        {"text": "The pay is worth the time", "category": "money", "risk": "medium", "verdict": "failed", "evidence": "per hour it was barely worth it"}
+      ],
+      "outcome": {"happened": false, "what_happened": "The requirements changed three times and it took about 45 hours over five weeks. I got paid in full, but per hour it was barely worth it.", "lesson": "Write the scope down before quoting, and price changes separately."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t9a", "theme": "sleep-schedule", "domain": "health", "confidence": 0.75,
+      "created_days_ago": 141, "review_after_days": 14,
+      "title": "Wake up at 5am to study before college",
+      "reasoning": "Everyone says early mornings are the most productive. I can sleep by 10pm consistently if I'm disciplined, and morning study should be more productive for me than late nights.",
+      "alternatives": "Keep studying at night but stop at midnight.",
+      "expected_outcome": "Study two hours every morning for a month.",
+      "premortem": "It's review day and this failed because the 10pm bedtime collided with late labs.",
+      "missing_considerations": ["What controls my bedtime", "Late labs on two evenings a week"],
+      "assumptions": [
+        {"text": "I can sleep by 10pm consistently", "category": "self", "risk": "high", "verdict": "failed", "evidence": "Sleeping by 10 never happened"},
+        {"text": "Morning study is more productive for me", "category": "self", "risk": "medium", "verdict": "unclear", "evidence": ""}
+      ],
+      "outcome": {"happened": false, "what_happened": "Managed 5am for four days. Sleeping by 10 never happened because of group chats and late labs, so I was exhausted and gave up in the second week.", "lesson": "Fix the bedtime first; the wake-up time follows."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t10a", "theme": "open-source", "domain": "career", "confidence": 0.75,
+      "created_days_ago": 138, "review_after_days": 35,
+      "title": "Contribute to a big open-source ML library",
+      "reasoning": "Open-source contributions look great on a resume. Good-first-issues should be easy to pick up, and the maintainers will review a PR within a week, so I can have something merged this month.",
+      "alternatives": "Start with a smaller library, or documentation fixes.",
+      "expected_outcome": "Get one PR merged within a month.",
+      "premortem": "It's review day and this failed because popular repos have more contributors than reviewers.",
+      "missing_considerations": ["How fast this repo reviews outside PRs", "How competitive good-first-issues are"],
+      "assumptions": [
+        {"text": "Good-first-issues will be easy to pick up", "category": "external", "risk": "medium", "verdict": "failed", "evidence": "The issues I picked were already claimed"},
+        {"text": "Maintainers will review my PR within a week", "category": "people", "risk": "medium", "verdict": "failed", "evidence": "waited five weeks for a review"}
+      ],
+      "outcome": {"happened": false, "what_happened": "The issues I picked were already claimed by the time I finished setting up. My one PR waited five weeks for a review and is still open.", "lesson": "Pick projects by review speed, not by how famous they are."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t1b", "theme": "learn-fast", "domain": "career", "confidence": 0.8,
+      "created_days_ago": 128, "review_after_days": 35,
+      "title": "Learn Docker over one weekend before the internship",
+      "reasoning": "My internship starts next month and the job description mentions Docker. A weekend is enough to get comfortable with it if I focus. I'll keep the whole weekend free, and I expect the team to use Docker from day one.",
+      "alternatives": "Learn it on the job when it comes up.",
+      "expected_outcome": "Be comfortable writing Dockerfiles and compose files before day one.",
+      "premortem": "It's review day and this failed because one weekend was never a full weekend.",
+      "missing_considerations": ["Whether the weekend is actually free", "What the team uses in week one"],
+      "assumptions": [
+        {"text": "A weekend is enough to get comfortable with Docker", "category": "time", "risk": "high", "verdict": "failed", "evidence": "networking between containers was still confusing"},
+        {"text": "I'll be able to focus the whole weekend", "category": "self", "risk": "medium", "verdict": "failed", "evidence": "Saturday went to a family event"},
+        {"text": "The internship will need Docker on day one", "category": "external", "risk": "medium", "verdict": "failed", "evidence": "the team didn't touch Docker for my first month"}
+      ],
+      "outcome": {"happened": false, "what_happened": "Saturday went to a family event. On Sunday I got one container running, but networking between containers was still confusing. In the end the team didn't touch Docker for my first month.", "lesson": "Check what the team actually uses before cramming for it."},
+      "repeat_warnings": [
+        {"assumption": "A weekend is enough to get comfortable with Docker", "past_key": "t1a", "note": "Two weeks of evenings wasn't enough for React once coursework showed up."}
+      ]
+    },
+    {
+      "key": "t2b", "theme": "job-applications", "domain": "career", "confidence": 0.6,
+      "created_days_ago": 124, "review_after_days": 14,
+      "title": "Ask a senior for a referral at their company",
+      "reasoning": "Cold applications went nowhere last time. A senior from my college works at a company I like and was helpful before. I think they'd be willing to refer me, and a referral should get me past the resume screen.",
+      "alternatives": "Keep applying through the careers page.",
+      "expected_outcome": "Get an interview call within three weeks.",
+      "premortem": "It's review day and this failed because the referral didn't change how the resume was screened.",
+      "missing_considerations": ["A plan if the senior says no"],
+      "assumptions": [
+        {"text": "The senior will be willing to refer me", "category": "people", "risk": "medium", "verdict": "held", "evidence": "The senior referred me the same week"},
+        {"text": "A referral will get me past resume screening", "category": "external", "risk": "medium", "verdict": "held", "evidence": "got an interview call ten days later"}
+      ],
+      "outcome": {"happened": true, "what_happened": "The senior referred me the same week and I got an interview call ten days later. The interview went to a second round.", "lesson": "Warm introductions beat volume; ask earlier next time."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t3b", "theme": "side-project-launch", "domain": "projects", "confidence": 0.8,
+      "created_days_ago": 120, "review_after_days": 21,
+      "title": "Build a notes Chrome extension over winter break",
+      "reasoning": "Winter break gives me about three free weeks, which should be plenty for a small Chrome extension that saves highlights to notes. The Chrome extension APIs are well documented, so I won't get stuck.",
+      "alternatives": "Build a web app instead.",
+      "expected_outcome": "Publish the extension with all five planned features.",
+      "premortem": "It's review day and this failed because the break had fewer free days than it looked.",
+      "missing_considerations": ["Travel and family plans during the break"],
+      "assumptions": [
+        {"text": "Winter break gives me about three free weeks", "category": "time", "risk": "high", "verdict": "failed", "evidence": "The break turned into two working weeks"},
+        {"text": "The Chrome extension APIs are well documented", "category": "external", "risk": "low", "verdict": "held", "evidence": "The docs were good"}
+      ],
+      "outcome": {"happened": false, "what_happened": "The break turned into two working weeks after travel and family plans. The docs were good, and I shipped three of the five features.", "lesson": "Count free days after the obvious interruptions, not before."},
+      "repeat_warnings": [
+        {"assumption": "Winter break gives me about three free weeks", "past_key": "t3a", "note": "The habit tracker also had no buffer and took seven weeks instead of four."}
+      ]
+    },
+    {
+      "key": "t4b", "theme": "fitness-routine", "domain": "health", "confidence": 0.7,
+      "created_days_ago": 116, "review_after_days": 42,
+      "title": "Run three times a week with a friend",
+      "reasoning": "The gym plan collapsed, so this time I'm pairing up. Running with a friend will keep me accountable, and three short runs a week fit around classes.",
+      "alternatives": "Run alone with an app.",
+      "expected_outcome": "Still running three times a week after six weeks.",
+      "premortem": "It's review day and this failed because the plan depended on someone else's schedule.",
+      "missing_considerations": ["What to do when the friend can't make it"],
+      "assumptions": [
+        {"text": "Running with a friend will keep me accountable", "category": "people", "risk": "medium", "verdict": "unclear", "evidence": ""},
+        {"text": "Three short runs a week fit around classes", "category": "time", "risk": "low", "verdict": "held", "evidence": "the short runs fit easily around classes"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Kept it up for six weeks; the short runs fit easily around classes. My friend missed about a third of the runs, and I went anyway most of those times.", "lesson": "Small, scheduled sessions survive busy weeks better than ambitious plans."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t5b", "theme": "exam-prep", "domain": "study", "confidence": 0.8,
+      "created_days_ago": 112, "review_after_days": 16,
+      "title": "Follow a two-week study plan for the OS exam",
+      "reasoning": "Cramming DBMS went badly. This time I'll write a two-week plan with one topic per day. I'll follow a written plan most days, and two weeks is enough for the syllabus at that pace.",
+      "alternatives": "Study with a friend group instead.",
+      "expected_outcome": "Finish the syllabus before the exam and score 75 or more.",
+      "premortem": "It's review day and this failed because one missed day snowballed into abandoning the plan.",
+      "missing_considerations": ["Buffer days for slips"],
+      "assumptions": [
+        {"text": "I'll follow a written plan most days", "category": "self", "risk": "medium", "verdict": "held", "evidence": "Followed the plan on 10 of 14 days"},
+        {"text": "Two weeks is enough for the syllabus at that pace", "category": "time", "risk": "medium", "verdict": "held", "evidence": "finished the syllabus a day early"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Followed the plan on 10 of 14 days and finished the syllabus a day early. Scored 82.", "lesson": "A written plan with daily topics makes progress visible; keep doing it."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t6b", "theme": "team-dependency", "domain": "projects", "confidence": 0.8,
+      "created_days_ago": 108, "review_after_days": 3,
+      "title": "Lead the hackathon team and assign tasks by strengths",
+      "reasoning": "I'm leading a team of four for a 36-hour hackathon. Everyone will commit for the full 36 hours since we all signed up together. Assigning tasks by strengths should be faster than pairing on everything.",
+      "alternatives": "Pair programming in two pairs.",
+      "expected_outcome": "Finish a working demo and place in the top five.",
+      "premortem": "It's review day and this failed because the plan assumed four people for all 36 hours.",
+      "missing_considerations": ["What happens if someone drops out"],
+      "assumptions": [
+        {"text": "Everyone will commit for the full 36 hours", "category": "people", "risk": "medium", "verdict": "failed", "evidence": "One member left after 20 hours"},
+        {"text": "Assigning tasks by strengths will be faster than pairing", "category": "people", "risk": "low", "verdict": "held", "evidence": "splitting by strengths kept everyone unblocked"}
+      ],
+      "outcome": {"happened": true, "what_happened": "We finished the demo and placed third. One member left after 20 hours for a family function, but splitting by strengths kept everyone unblocked.", "lesson": "Plan for someone leaving early in long events; the strengths-based split worked."},
+      "repeat_warnings": [
+        {"assumption": "Everyone will commit for the full 36 hours", "past_key": "t6a", "note": "In the four-way group project, two of four teammates delivered late."}
+      ]
+    },
+    {
+      "key": "t7b", "theme": "money-purchase", "domain": "money", "confidence": 0.9,
+      "created_days_ago": 104, "review_after_days": 90,
+      "title": "Cancel three subscriptions to save for a course",
+      "reasoning": "I want a paid ML course and don't want to ask my parents. If I cancel three subscriptions, the savings will cover the course in three months. I won't really miss them since I barely use them.",
+      "alternatives": "Wait for a course sale.",
+      "expected_outcome": "Pay for the course from savings within three months.",
+      "premortem": "It's review day and this failed because the savings crept back into other spending.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "I won't miss the subscriptions", "category": "self", "risk": "low", "verdict": "failed", "evidence": "I did re-subscribe to the music app after a month"},
+        {"text": "The savings will cover the course in three months", "category": "money", "risk": "low", "verdict": "held", "evidence": "Saved enough for the course in three months"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Saved enough for the course in three months and paid for it myself. I did re-subscribe to the music app after a month.", "lesson": "Cut what you don't use; keep the one thing you use daily."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t8b", "theme": "freelance-gig", "domain": "money", "confidence": 0.7,
+      "created_days_ago": 100, "review_after_days": 30,
+      "title": "Charge a fixed price with a written scope for the next gig",
+      "reasoning": "The last gig grew from 20 to 45 hours. For this one I'll write the scope down and charge a fixed price. A written scope will keep extra requests from becoming free work, and a fixed price should pay better per hour.",
+      "alternatives": "Charge hourly.",
+      "expected_outcome": "Deliver on time and earn at least double my last hourly rate.",
+      "premortem": "It's review day and this failed because the client pushed back on the written scope.",
+      "missing_considerations": ["What if the client refuses a written scope"],
+      "assumptions": [
+        {"text": "A written scope will keep extra requests from becoming free work", "category": "people", "risk": "medium", "verdict": "held", "evidence": "I quoted them separately and they paid"},
+        {"text": "A fixed price will pay better per hour", "category": "money", "risk": "medium", "verdict": "held", "evidence": "Earned about twice my last hourly rate"}
+      ],
+      "outcome": {"happened": true, "what_happened": "The client asked for two extras; I quoted them separately and they paid. Earned about twice my last hourly rate and delivered on time.", "lesson": "A scope document turns scope creep into paid work."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t9b", "theme": "sleep-schedule", "domain": "health", "confidence": 0.7,
+      "created_days_ago": 96, "review_after_days": 21,
+      "title": "No phone after 11pm",
+      "reasoning": "Late-night scrolling is wrecking my sleep. Putting the phone in another room will be enough to stop it, and my sleep quality should improve within two weeks.",
+      "alternatives": "Use app timers.",
+      "expected_outcome": "Asleep before midnight on most nights and less tired in class.",
+      "premortem": "It's review day and this failed because I kept bringing the phone back for alarms.",
+      "missing_considerations": ["An alarm that isn't the phone"],
+      "assumptions": [
+        {"text": "Putting the phone in another room will be enough", "category": "self", "risk": "medium", "verdict": "held", "evidence": "Leaving the phone outside the room worked on most nights"},
+        {"text": "My sleep will improve within two weeks", "category": "self", "risk": "low", "verdict": "held", "evidence": "I was falling asleep faster within about ten days"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Leaving the phone outside the room worked on most nights. I was falling asleep faster within about ten days and felt less tired in morning classes.", "lesson": "Change the environment instead of relying on willpower."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t10b", "theme": "open-source", "domain": "career", "confidence": 0.8,
+      "created_days_ago": 92, "review_after_days": 14,
+      "title": "Start with documentation fixes in a smaller library",
+      "reasoning": "The big library never reviewed my PR. Smaller projects review faster, and docs PRs are a good way to learn the codebase before touching code.",
+      "alternatives": "Keep waiting on the big library.",
+      "expected_outcome": "Get two PRs merged within a month.",
+      "premortem": "It's review day and this failed because docs PRs didn't lead anywhere.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Smaller projects review faster", "category": "people", "risk": "medium", "verdict": "held", "evidence": "merged within three days"},
+        {"text": "Docs PRs are a good way to learn the codebase", "category": "self", "risk": "low", "verdict": "held", "evidence": "I understood the module layout well enough"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Both docs PRs were merged within three days. After reading the code to write them, I understood the module layout well enough that the maintainer suggested a code issue for me.", "lesson": "Choose projects with responsive maintainers, and start small to earn trust."},
+      "repeat_warnings": [
+        {"assumption": "Smaller projects review faster", "past_key": "t10a", "note": "Your PR to the big library waited five weeks for review."}
+      ]
+    },
+    {
+      "key": "t1c", "theme": "learn-fast", "domain": "study", "confidence": 0.7,
+      "created_days_ago": 84, "review_after_days": 21,
+      "title": "Learn FastAPI by building a small API over three weekends",
+      "reasoning": "Tutorial-only learning hasn't stuck for me. I'll build a small CRUD API over three weekends instead of rushing. Three weekends is enough for a small API, and building something real teaches faster than tutorials.",
+      "alternatives": "Take a structured course.",
+      "expected_outcome": "A deployed CRUD API with tests by the end of the third weekend.",
+      "premortem": "It's review day and this failed because weekends got taken over by other plans again.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Three weekends is enough for a small CRUD API", "category": "time", "risk": "medium", "verdict": "held", "evidence": "Finished the API in two and a half weekends"},
+        {"text": "Building something real teaches faster than tutorials", "category": "self", "risk": "low", "verdict": "held", "evidence": "faster than any course had"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Finished the API in two and a half weekends, with tests. Building it exposed gaps in dependency injection and async faster than any course had.", "lesson": "A realistic timeline plus a real project worked; repeat this pattern."},
+      "repeat_warnings": [
+        {"assumption": "Three weekends is enough for a small CRUD API", "past_key": "t1b", "note": "The Docker weekend lost a full day to a family event."}
+      ]
+    },
+    {
+      "key": "t2c", "theme": "job-applications", "domain": "career", "confidence": 0.8,
+      "created_days_ago": 80, "review_after_days": 21,
+      "title": "Spend a week tailoring resumes for eight target roles",
+      "reasoning": "The generic batch got a 10% reply rate. I'll pick eight roles I actually want and tailor each resume. Tailored resumes will get more replies than generic ones, and a week is enough to tailor eight properly.",
+      "alternatives": "Ask for more referrals instead.",
+      "expected_outcome": "Get at least two interview calls.",
+      "premortem": "It's review day and this failed because tailoring took longer and the best roles closed.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Tailored resumes will get more replies than generic ones", "category": "external", "risk": "medium", "verdict": "held", "evidence": "Got three interview calls out of eight"},
+        {"text": "A week is enough to tailor eight resumes properly", "category": "time", "risk": "medium", "verdict": "failed", "evidence": "Tailoring took nine days, not seven"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Got three interview calls out of eight applications. Tailoring took nine days, not seven.", "lesson": "Tailoring works; budget about a day per application."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t3c", "theme": "side-project-launch", "domain": "projects", "confidence": 0.65,
+      "created_days_ago": 76, "review_after_days": 18,
+      "title": "Ship a three-feature MVP in two weeks",
+      "reasoning": "My last two projects ran over. This time I'm cutting scope to three features so two weeks is realistic, and shipping early should get better feedback than polishing.",
+      "alternatives": "Polish all five features first.",
+      "expected_outcome": "Launch in two weeks and get at least five real users.",
+      "premortem": "It's review day and this failed because the scope crept back in.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Cutting scope to three features makes two weeks realistic", "category": "time", "risk": "medium", "verdict": "held", "evidence": "Shipped in 12 days"},
+        {"text": "Shipping early gets better feedback than polishing", "category": "external", "risk": "low", "verdict": "held", "evidence": "two useful bug reports"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Shipped in 12 days with the three features. Got six real users and two useful bug reports in the first week.", "lesson": "Scope cuts beat longer timelines."},
+      "repeat_warnings": [
+        {"assumption": "Cutting scope to three features makes two weeks realistic", "past_key": "t3b", "note": "The Chrome extension shipped three of five features because the free time was shorter than planned."}
+      ]
+    },
+    {
+      "key": "t4c", "theme": "fitness-routine", "domain": "health", "confidence": 0.8,
+      "created_days_ago": 72, "review_after_days": 30,
+      "title": "Do 20-minute home workouts instead of the gym",
+      "reasoning": "The gym routine died during exams. A 20-minute home workout is short enough that I won't skip it, and needing no equipment removes the usual excuses.",
+      "alternatives": "Rejoin the gym after exams.",
+      "expected_outcome": "Work out at least four days a week for a month.",
+      "premortem": "It's review day and this failed because 20 minutes still got pushed out by exams.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "20 minutes is short enough that I won't skip it", "category": "self", "risk": "medium", "verdict": "held", "evidence": "Skipped only on travel days"},
+        {"text": "No equipment means no excuses", "category": "external", "risk": "low", "verdict": "held", "evidence": "doing it in my room"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Worked out four or five days a week for a month, doing it in my room right after waking up. Skipped only on travel days.", "lesson": "Shrink the habit until it survives bad weeks."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t5c", "theme": "exam-prep", "domain": "career", "confidence": 0.85,
+      "created_days_ago": 68, "review_after_days": 32,
+      "title": "Take the AWS Cloud Practitioner exam after a month of prep",
+      "reasoning": "A cloud certification would help with backend roles. A month of prep at an hour a day should be enough, and the free practice tests are representative of the real exam.",
+      "alternatives": "Skip certifications and build a project on AWS.",
+      "expected_outcome": "Pass on the first attempt.",
+      "premortem": "It's review day and this failed because the practice tests didn't match the exam.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "A month of prep is enough", "category": "time", "risk": "medium", "verdict": "held", "evidence": "Passed on the first attempt"},
+        {"text": "The free practice tests are representative of the real exam", "category": "external", "risk": "medium", "verdict": "unclear", "evidence": ""}
+      ],
+      "outcome": {"happened": true, "what_happened": "Passed on the first attempt with 810. The free practice tests felt harder than the real thing.", "lesson": "A month at an hour a day was enough; use the same pace for the next certification."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t6c", "theme": "team-dependency", "domain": "projects", "confidence": 0.7,
+      "created_days_ago": 64, "review_after_days": 42,
+      "title": "Run weekly check-ins with my capstone teammates",
+      "reasoning": "Group work has gone wrong when problems surfaced too late. Weekly 20-minute check-ins should surface delays early, and teammates will show up since it's short.",
+      "alternatives": "Use a shared task board only.",
+      "expected_outcome": "No last-week surprises; submit the capstone on time.",
+      "premortem": "It's review day and this failed because the check-ins turned into status theatre.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Weekly check-ins will surface delays early", "category": "people", "risk": "medium", "verdict": "held", "evidence": "Caught a blocked task in week three"},
+        {"text": "Teammates will show up to check-ins", "category": "people", "risk": "low", "verdict": "held", "evidence": "Attendance was about 80%"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Caught a blocked task in week three and reassigned it. Attendance was about 80%, and we submitted two days early.", "lesson": "Short recurring check-ins are cheap insurance on group work."},
+      "repeat_warnings": [
+        {"assumption": "Teammates will show up to check-ins", "past_key": "t6a", "note": "In the four-way split, two teammates delivered the night before the deadline."}
+      ]
+    },
+    {
+      "key": "t7c", "theme": "money-purchase", "domain": "money", "confidence": 0.75,
+      "created_days_ago": 60, "review_after_days": 45,
+      "title": "Buy a second-hand monitor instead of a new one",
+      "reasoning": "A new monitor costs twice as much. A used monitor will be as reliable as a new one if I test it before paying, and I'll find a good deal within a week on local listings.",
+      "alternatives": "Buy new with a warranty.",
+      "expected_outcome": "Get a working monitor for half the new price.",
+      "premortem": "It's review day and this failed because the monitor died after the return window.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "A used monitor will be as reliable as a new one", "category": "external", "risk": "medium", "verdict": "held", "evidence": "works perfectly after six weeks"},
+        {"text": "I'll find a good deal within a week", "category": "time", "risk": "low", "verdict": "held", "evidence": "Found one in four days"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Found one in four days at 45% of the new price. It works perfectly after six weeks.", "lesson": "Testing before paying makes used hardware a good bet."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t8c", "theme": "freelance-gig", "domain": "career", "confidence": 0.65,
+      "created_days_ago": 56, "review_after_days": 40,
+      "title": "Decline a low-paying gig to focus on interview prep",
+      "reasoning": "Interview season is here. Interview prep will pay off more than the gig money, and I can afford to skip the income this month.",
+      "alternatives": "Take the gig and prep at night.",
+      "expected_outcome": "Get a job offer within two months.",
+      "premortem": "It's review day and this failed because interview prep didn't convert and the savings ran out.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "Interview prep will pay off more than the gig money", "category": "money", "risk": "medium", "verdict": "held", "evidence": "Got an offer five weeks later"},
+        {"text": "I can afford to skip the income this month", "category": "money", "risk": "low", "verdict": "held", "evidence": "Money was tight but fine"}
+      ],
+      "outcome": {"happened": true, "what_happened": "Got an offer five weeks later. Money was tight but fine.", "lesson": "Protecting focus during interview season paid off."},
+      "repeat_warnings": []
+    },
+    {
+      "key": "t9c", "theme": "sleep-schedule", "domain": "health", "confidence": 0.8,
+      "created_days_ago": 52, "review_after_days": 30,
+      "title": "Shift to a 7am wake-up instead of 5am",
+      "reasoning": "5am failed because I couldn't sleep early. A smaller change is easier to keep, so I'll aim for 7am. Late labs won't push my bedtime past midnight.",
+      "alternatives": "Try 5am again with an earlier bedtime.",
+      "expected_outcome": "Wake at 7am on at least five days a week for a month.",
+      "premortem": "It's review day and this failed because late labs kept pushing bedtime back.",
+      "missing_considerations": [],
+      "assumptions": [
+        {"text": "A smaller change is easier to keep", "category": "self", "risk": "low", "verdict": "held", "evidence": "Kept 7am on five of seven days"},
+        {"text": "Late labs won't push my bedtime past midnight", "category": "external", "risk": "medium", "verdict": "unclear", "evidence": ""}
+      ],
+      "outcome": {"happened": true, "what_happened": "Kept 7am on five of seven days for a month. Labs ran late twice.", "lesson": "Smaller habit changes stick; adjust in steps."},
+      "repeat_warnings": [
+        {"assumption": "Late labs won't push my bedtime past midnight", "past_key": "t9a", "note": "Late labs and group chats broke the 10pm bedtime last time."}
+      ]
+    },
+    {
+      "key": "t10c", "theme": "open-source", "domain": "career", "confidence": 0.85,
+      "created_days_ago": 48, "review_after_days": 30,
+      "title": "Fix a real bug in that library within two weeks",
+      "reasoning": "The maintainer suggested a bug for me. I understand the codebase well enough now from the docs PRs, and two weeks should be enough to fix it and get it merged.",
+      "alternatives": "Do one more docs PR first.",
+      "expected_outcome": "Bug fix merged within two weeks.",
+      "premortem": "It's review day and this failed because the test setup took longer than the fix.",
+      "missing_considerations": ["Time for setting up and running the test suite"],
+      "assumptions": [
+        {"text": "I understand the codebase well enough now", "category": "self", "risk": "medium", "verdict": "held", "evidence": "The fix itself was small"},
+        {"text": "Two weeks is enough to fix it and get it merged", "category": "time", "risk": "high", "verdict": "failed", "evidence": "It merged in week four"}
+      ],
+      "outcome": {"happened": false, "what_happened": "The fix itself was small, but the tests were flaky on Windows and debugging them took three weeks. It merged in week four.", "lesson": "Budget time for the environment, not just the code change."},
+      "repeat_warnings": [
+        {"assumption": "Two weeks is enough to fix it and get it merged", "past_key": "t10a", "note": "Your first PR to a big library waited five weeks for review."}
+      ]
+    },
+    {
+      "key": "o1", "theme": null, "domain": "career", "confidence": 0.75,
+      "created_days_ago": 10, "review_after_days": 60,
+      "title": "Accept the backend internship over the ML research assistant role",
+      "reasoning": "I have two offers. The backend internship pays better and backend experience should make me more hireable than research. The team said I'd work on real features, not just bug fixes. I can still learn ML on weekends.",
+      "alternatives": "Take the research assistant role and apply for backend roles later.",
+      "expected_outcome": "Get a return offer or a strong reference by the end of the internship.",
+      "premortem": "It's review day and this failed because weekends went to recovering from work, not learning ML.",
+      "missing_considerations": ["What the research role would teach that the internship won't", "How many weekends are actually free during an internship"],
+      "assumptions": [
+        {"text": "Backend experience will make me more hireable than research", "category": "external", "risk": "medium"},
+        {"text": "The team will give me real features, not just bug fixes", "category": "people", "risk": "medium"},
+        {"text": "I can still learn ML on weekends", "category": "time", "risk": "high"}
+      ],
+      "outcome": null,
+      "repeat_warnings": [
+        {"assumption": "I can still learn ML on weekends", "past_key": "t1b", "note": "The Docker weekend lost Saturday to a family event."}
+      ]
+    },
+    {
+      "key": "o2", "theme": null, "domain": "projects", "confidence": 0.85,
+      "created_days_ago": 25, "review_after_days": 21,
+      "title": "Build a RAG project for my portfolio in three weeks",
+      "reasoning": "Recruiters want to see AI projects. Three weeks is enough to build and deploy a RAG app over my college notes. Free-tier APIs should be enough for the demo, and recruiters will look at a deployed demo more than code.",
+      "alternatives": "Improve an existing project instead.",
+      "expected_outcome": "A deployed RAG demo linked on my resume within three weeks.",
+      "premortem": "It's review day and this failed because evaluation and deployment took longer than building the first version.",
+      "missing_considerations": ["How to measure whether retrieval works", "What happens when free-tier limits are hit"],
+      "assumptions": [
+        {"text": "Three weeks is enough to build and deploy a RAG app", "category": "time", "risk": "high"},
+        {"text": "Free-tier APIs will be enough for the demo", "category": "money", "risk": "medium"},
+        {"text": "Recruiters will look at a deployed demo", "category": "people", "risk": "medium"}
+      ],
+      "outcome": null,
+      "repeat_warnings": [
+        {"assumption": "Three weeks is enough to build and deploy a RAG app", "past_key": "t3a", "note": "The habit tracker was planned for four weeks and took seven."},
+        {"assumption": "Three weeks is enough to build and deploy a RAG app", "past_key": "t1a", "note": "Two weeks of evenings wasn't enough to learn React for the hackathon."}
+      ]
+    },
+    {
+      "key": "o3", "theme": null, "domain": "relationships", "confidence": 0.7,
+      "created_days_ago": 18, "review_after_days": 28,
+      "title": "Mentor juniors at the college coding club",
+      "reasoning": "Teaching is a good way to solidify what I know. One evening a week is a small commitment, and the juniors will show up regularly if the sessions are hands-on.",
+      "alternatives": "Write tutorials instead of live sessions.",
+      "expected_outcome": "Run at least six sessions with a steady group.",
+      "premortem": "It's review day and this failed because attendance dropped after the first two sessions.",
+      "missing_considerations": ["How to keep attendance up after the novelty wears off"],
+      "assumptions": [
+        {"text": "One evening a week is a small commitment", "category": "time", "risk": "medium"},
+        {"text": "Juniors will show up regularly if sessions are hands-on", "category": "people", "risk": "medium"}
+      ],
+      "outcome": null,
+      "repeat_warnings": []
+    },
+    {
+      "key": "o4", "theme": null, "domain": "money", "confidence": 0.65,
+      "created_days_ago": 6, "review_after_days": 45,
+      "title": "Move to a shared flat closer to the office",
+      "reasoning": "The commute is 90 minutes each way. A shared flat costs more, but I'll save three hours a day and the extra rent fits my stipend. My flatmates are friends, so living together will be easy.",
+      "alternatives": "Stay and use the commute for audiobooks.",
+      "expected_outcome": "More free time and no money stress after two months.",
+      "premortem": "It's review day and this failed because the saved time disappeared into late nights with flatmates.",
+      "missing_considerations": ["Deposit and setup costs", "How to split chores and bills"],
+      "assumptions": [
+        {"text": "The extra rent fits my stipend", "category": "money", "risk": "medium"},
+        {"text": "Living with friends will be easy", "category": "people", "risk": "medium"},
+        {"text": "I'll use the saved commute time well", "category": "self", "risk": "medium"}
+      ],
+      "outcome": null,
+      "repeat_warnings": []
+    },
+    {
+      "key": "o5", "theme": null, "domain": "career", "confidence": 0.8,
+      "created_days_ago": 30, "review_after_days": 28,
+      "title": "Start a weekly blog about what I learn",
+      "reasoning": "Writing in public builds credibility. I'll have something worth writing every week since I'm learning constantly, and each post should take less than two hours.",
+      "alternatives": "Post short threads instead of full articles.",
+      "expected_outcome": "Publish four posts in the first month.",
+      "premortem": "It's review day and this failed because each post took twice as long as planned.",
+      "missing_considerations": ["What to do in weeks with nothing new to write about"],
+      "assumptions": [
+        {"text": "I'll have something worth writing every week", "category": "self", "risk": "medium"},
+        {"text": "Each post will take less than two hours", "category": "time", "risk": "high"}
+      ],
+      "outcome": null,
+      "repeat_warnings": []
+    },
+    {
+      "key": "o6", "theme": null, "domain": "projects", "confidence": 0.7,
+      "created_days_ago": 3, "review_after_days": 30,
+      "title": "Switch from Windows to Linux for development",
+      "reasoning": "Flaky tests on Windows cost me weeks on the open-source bug fix. Dual-booting Ubuntu should make tooling smoother, and I'll get used to it within a week.",
+      "alternatives": "Use WSL instead of dual-booting.",
+      "expected_outcome": "Do all development on Linux with fewer environment issues.",
+      "premortem": "It's review day and this failed because driver issues ate the time it was supposed to save.",
+      "missing_considerations": ["WSL as a lower-risk option", "Backups before repartitioning"],
+      "assumptions": [
+        {"text": "Dual-booting Ubuntu will make tooling smoother", "category": "external", "risk": "medium"},
+        {"text": "I'll get used to Linux within a week", "category": "self", "risk": "medium"}
+      ],
+      "outcome": null,
+      "repeat_warnings": []
+    }
+  ]
+}

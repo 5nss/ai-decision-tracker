@@ -1,7 +1,26 @@
-# .gitignore
-.env
+# Python
 __pycache__/
 *.pyc
-*.db
 .venv/
-venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Local data and secrets
+.env
+backend/data/
+*.db
+*.db-wal
+*.db-shm
+
+# Eval response cache (results/ is committed)
+backend/evals/.cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Tooling
+.claude/launch.json
+.claude/settings.local.json
+.DS_Store
