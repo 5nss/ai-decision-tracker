@@ -1,0 +1,359 @@
+{
+  "generated_at": "2026-11-22T12:29:14+00:00",
+  "dataset": {
+    "name": "demo journal v1 (hand-labeled, synthetic)",
+    "decisions": 36,
+    "reviewed": 30,
+    "assumptions": 79,
+    "judged_assumptions": 64,
+    "themes": 10
+  },
+  "extraction": {
+    "n_cases": 36,
+    "matcher": {
+      "kind": "lexical overlap coefficient",
+      "threshold": 0.5
+    },
+    "results": [
+      {
+        "system": "heuristic",
+        "label": "heuristic:rules-v1",
+        "precision": 0.9629629629629629,
+        "recall": 0.3291139240506329,
+        "f1": 0.4905660377358491,
+        "matched": 26,
+        "n_pred": 27,
+        "n_gold": 79,
+        "category_accuracy": 0.4230769230769231,
+        "sensitivity": [
+          {
+            "threshold": 0.4,
+            "precision": 0.9629629629629629,
+            "recall": 0.3291139240506329,
+            "f1": 0.4905660377358491,
+            "matched": 26,
+            "n_pred": 27,
+            "n_gold": 79
+          },
+          {
+            "threshold": 0.5,
+            "precision": 0.9629629629629629,
+            "recall": 0.3291139240506329,
+            "f1": 0.4905660377358491,
+            "matched": 26,
+            "n_pred": 27,
+            "n_gold": 79
+          },
+          {
+            "threshold": 0.6,
+            "precision": 0.9629629629629629,
+            "recall": 0.3291139240506329,
+            "f1": 0.4905660377358491,
+            "matched": 26,
+            "n_pred": 27,
+            "n_gold": 79
+          }
+        ],
+        "failures": 0
+      }
+    ],
+    "examples": [
+      {
+        "key": "t1a",
+        "title": "Learn React in two weeks for the hackathon",
+        "gold": [
+          "Two weeks of evenings is enough to learn React",
+          "My JavaScript is strong enough to skip the fundamentals",
+          "Tutorials will cover what our project needs"
+        ],
+        "predictions": {
+          "heuristic": [
+            "I think two weeks of evenings is enough to learn React if I go straight to hooks",
+            "The official tutorial and a couple of YouTube courses should cover everything our project needs"
+          ]
+        }
+      },
+      {
+        "key": "t2a",
+        "title": "Apply to 30 internships with one generic resume",
+        "gold": [
+          "Volume matters more than tailoring",
+          "Recruiters will reply within two weeks"
+        ],
+        "predictions": {
+          "heuristic": [
+            "I think volume matters more than tailoring at this stage, since most companies just skim resumes",
+            "If I send 30 applications this week, recruiters should get back to me within two weeks and I'll have a few interviews lined up"
+          ]
+        }
+      },
+      {
+        "key": "t3a",
+        "title": "Launch my habit-tracker app in one month",
+        "gold": [
+          "One month is enough to build and launch the app",
+          "Friends will try it and give feedback",
+          "I won't need a backend for the first version"
+        ],
+        "predictions": {
+          "heuristic": []
+        }
+      },
+      {
+        "key": "t4a",
+        "title": "Go to the gym five days a week starting Monday",
+        "gold": [
+          "I'll stay motivated after the first week",
+          "Mornings are free for the gym"
+        ],
+        "predictions": {
+          "heuristic": [
+            "Once the first week is done I expect the habit to carry me, and mornings are the only time I'm always free"
+          ]
+        }
+      },
+      {
+        "key": "t5a",
+        "title": "Cram for the DBMS exam in the last three days",
+        "gold": [
+          "Three days is enough to cover the syllabus",
+          "Past papers will be similar to this exam"
+        ],
+        "predictions": {
+          "heuristic": [
+            "I think three days of full-time study is enough to cover the syllabus",
+            "Past papers should be similar to this exam, so I'll focus on those"
+          ]
+        }
+      },
+      {
+        "key": "t6a",
+        "title": "Split the group project four ways and trust teammates to deliver",
+        "gold": [
+          "Teammates will finish their parts on time",
+          "Integration at the end will take one evening"
+        ],
+        "predictions": {
+          "heuristic": [
+            "Everyone said they'd finish their part by the deadline, and I expect integration at the end to take one evening"
+          ]
+        }
+      }
+    ]
+  },
+  "verdicts": {
+    "n": 64,
+    "labels": [
+      "held",
+      "failed",
+      "unclear"
+    ],
+    "results": [
+      {
+        "system": "outcome-polarity",
+        "label": "baseline: every assumption takes the outcome's polarity",
+        "n": 64,
+        "accuracy": 0.796875,
+        "macro_f1": 0.5566378066378067,
+        "per_label": {
+          "held": {
+            "precision": 0.8235294117647058,
+            "recall": 0.875,
+            "f1": 0.8484848484848485,
+            "support": 32
+          },
+          "failed": {
+            "precision": 0.7666666666666667,
+            "recall": 0.8846153846153846,
+            "f1": 0.8214285714285715,
+            "support": 26
+          },
+          "unclear": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          }
+        },
+        "labels": [
+          "held",
+          "failed",
+          "unclear"
+        ],
+        "confusion": [
+          [
+            28,
+            4,
+            0
+          ],
+          [
+            3,
+            23,
+            0
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ],
+        "grounding_rate": null,
+        "errors": []
+      },
+      {
+        "system": "heuristic",
+        "label": "heuristic:rules-v1",
+        "n": 64,
+        "accuracy": 0.34375,
+        "macro_f1": 0.3033008658008658,
+        "per_label": {
+          "held": {
+            "precision": 0.4838709677419355,
+            "recall": 0.46875,
+            "f1": 0.47619047619047616,
+            "support": 32
+          },
+          "failed": {
+            "precision": 0.8333333333333334,
+            "recall": 0.19230769230769232,
+            "f1": 0.3125,
+            "support": 26
+          },
+          "unclear": {
+            "precision": 0.07407407407407407,
+            "recall": 0.3333333333333333,
+            "f1": 0.12121212121212122,
+            "support": 6
+          }
+        },
+        "labels": [
+          "held",
+          "failed",
+          "unclear"
+        ],
+        "confusion": [
+          [
+            15,
+            0,
+            17
+          ],
+          [
+            13,
+            5,
+            8
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        "grounding_rate": 1.0,
+        "errors": [
+          {
+            "key": "t1a",
+            "assumption": "Two weeks of evenings is enough to learn React",
+            "gold": "failed",
+            "predicted": "held",
+            "evidence": "I got through components and hooks, but state management took most of the second week and assignments ate most of my evenings"
+          },
+          {
+            "key": "t2a",
+            "assumption": "Volume matters more than tailoring",
+            "gold": "failed",
+            "predicted": "unclear",
+            "evidence": ""
+          },
+          {
+            "key": "t2a",
+            "assumption": "Recruiters will reply within two weeks",
+            "gold": "failed",
+            "predicted": "unclear",
+            "evidence": ""
+          },
+          {
+            "key": "t3a",
+            "assumption": "One month is enough to build and launch the app",
+            "gold": "failed",
+            "predicted": "unclear",
+            "evidence": ""
+          },
+          {
+            "key": "t3a",
+            "assumption": "I won't need a backend for the first version",
+            "gold": "failed",
+            "predicted": "held",
+            "evidence": "Everyone wanted their habits on both phone and laptop, so I ended up needing a backend for sync anyway"
+          },
+          {
+            "key": "t4a",
+            "assumption": "I'll stay motivated after the first week",
+            "gold": "failed",
+            "predicted": "held",
+            "evidence": "Went five days the first week and two the second, then stopped completely during exams"
+          },
+          {
+            "key": "t5a",
+            "assumption": "Three days is enough to cover the syllabus",
+            "gold": "failed",
+            "predicted": "held",
+            "evidence": "Covered about 60% of the syllabus before the exam"
+          },
+          {
+            "key": "t5a",
+            "assumption": "Past papers will be similar to this exam",
+            "gold": "unclear",
+            "predicted": "held",
+            "evidence": "Covered about 60% of the syllabus before the exam"
+          }
+        ],
+        "failures": 0
+      }
+    ]
+  },
+  "retrieval": {
+    "k": 3,
+    "n_queries": 30,
+    "results": [
+      {
+        "system": "v1 rule: same domain, most recent",
+        "recall_at_k": 0.43333333333333335,
+        "mrr": 0.5489964494569758
+      },
+      {
+        "system": "TF-IDF (lexical)",
+        "recall_at_k": 0.7333333333333333,
+        "mrr": 0.7460858585858586
+      },
+      {
+        "system": "hash-512 embeddings",
+        "recall_at_k": 0.48333333333333334,
+        "mrr": 0.6924338624338624
+      }
+    ],
+    "thresholds": [
+      {
+        "embedding": "hash-512 embeddings",
+        "relevant_mean": 0.13352673758442204,
+        "irrelevant_mean": 0.05109301112005832,
+        "threshold": 0.174,
+        "f1": 0.45833333333333326,
+        "precision": 0.6111111111111112,
+        "recall": 0.36666666666666664
+      }
+    ]
+  },
+  "systems": [
+    {
+      "name": "heuristic",
+      "label": "heuristic:rules-v1",
+      "embed_model": "hash-512",
+      "model_versions": []
+    }
+  ],
+  "run": {
+    "seconds": 0.0,
+    "api_calls": 0,
+    "api_errors": 0
+  }
+}
